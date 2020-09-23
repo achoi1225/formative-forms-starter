@@ -1,13 +1,16 @@
 extends layout.pug
 
-mixin userRow(id, firstName, lastName, email)
-    tr 
+mixin userRow(id, firstName, lastName, email, age, favoriteBeatle, likesIceCream)
+    tr
         td= id
         td= firstName
         td= lastName
         td= email
+        td= age
+        td= favoriteBeatle
+        td= likesIceCream
 
-block content 
+block content
     h2 Existing Users
 
     table(class="table")
@@ -17,6 +20,10 @@ block content
                 th(scope="col") First Name
                 th(scope="col") Last Name
                 th(scope="col") Email
+                th(scope="col") Age
+                th(scope="col") Favorite Beatle
+                th(scope="col") Likes Ice Cream
+
 
         tbody
             tr
