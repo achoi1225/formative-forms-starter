@@ -12,9 +12,6 @@ app.use(express.urlencoded({extended: true}));
 
 const port = process.env.PORT || 3000;
 
-
-
-
 app.set("view engine", "pug");
 
 

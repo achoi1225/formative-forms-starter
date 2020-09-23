@@ -1,6 +1,13 @@
 extends layout.pug
 
-block content
+mixin userRow(id, firstName, lastName, email)
+    tr 
+        td= id
+        td= firstName
+        td= lastName
+        td= email
+
+block content 
     h2 Existing Users
 
     table(class="table")
@@ -14,7 +21,4 @@ block content
         tbody
             tr
                 each user in users
-                    td #{user.id}
-                    td #{user.firstName}
-                    td #{user.lastName}
-                    td #{user.email}
+                    +userRow(user.id, user.firstName, user.lastName, user.email)
